@@ -10,6 +10,8 @@
   font-size: 20px; /* Font size */
   color: #EEEEEE; /* Text color */
   border-radius: 0 5px 5px 0; /* Rounded corners */
+  background-color: rgba(40, 116, 240, 0.9);
+
 }
 
 /* Sidebar buttons hover effect */

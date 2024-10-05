@@ -22,6 +22,9 @@ export class SidenavComponent {
 
   imageList: Array<any> = [];
   filteredList: Array<any> = [];
+  filteredProducts: Array<any> = [];
+  
+
 
   ngOnInit() {
     this.getData();
@@ -56,6 +59,9 @@ export class SidenavComponent {
 
   onCardClick(route: string) {
     this.router.navigate([route]);
+  }
+  filterCategory(category: string) {
+    this.filteredProducts = this.imageList.filter(product => product.category === category);
   }
 
 }

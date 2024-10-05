@@ -22,6 +22,8 @@ import { SidenavComponent } from "../../sidenav/sidenav.component";
 export class ProductsComponent implements OnInit {
   imageList : Array<any> = [];
   filteredList : Array<any> = [];
+  filteredProducts : Array<any> = [];
+
 
   ngOnInit() {
     this.getData();
@@ -57,5 +59,8 @@ export class ProductsComponent implements OnInit {
 
   onCardClick(route: string) {
     this.router.navigate([route]);
+  }
+  filterCategory(category: string) {
+    this.filteredProducts = this.imageList.filter(product => product.category === category);
   }
 }

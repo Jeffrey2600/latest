@@ -5,35 +5,44 @@
     "title": "Sunset Over the Beach",
     "description": "A beautiful sunset over a calm beach.",
     "imageUrl": "assets/img1.jpeg",
-    "gender" : "men"
+    "gender" : "men",
+    "category" : "jwell"
   },
   {
     "id" : 2,
     "title": "Mountain Peaks",
     "description": "Snow-covered mountain peaks under a clear sky.",
     "imageUrl": "assets/img2.jpeg",
-    "gender" : "men"
+    "gender" : "men",
+    "category" : "jwell"
+
   },
   {
     "id" : 3,
     "title": "Forest Path",
     "description": "A peaceful path through a lush green forest.",
     "imageUrl": "assets/img3.jpeg",
-    "gender" : "women"
+    "gender" : "women",
+    "category" : "jwell"
+
   },
   {
     "id" : 4,
     "title": "Sunset Over the Beach",
     "description": "A beautiful sunset over a calm beach.",
     "imageUrl": "assets/img4.jpeg",
-    "gender" : "men"
+    "gender" : "men",
+    "category" : "jwell"
+
   },
   {
     "id" : 5,
     "title": "Mountain Peaks",
     "description": "Snow-covered mountain peaks under a clear sky.",
     "imageUrl": "assets/img5.jpeg",
-    "gender" : "women"
+    "gender" : "women",
+    "category" : "chudi"
+
 
   },
   {
@@ -41,7 +50,9 @@
     "title": "Forest Path",
     "description": "A peaceful path through a lush green forest.",
     "imageUrl": "assets/img6.jpeg",
-    "gender" : "women"
+    "gender" : "women",
+    "category" : "chudi"
+
 
   },
   {
@@ -49,7 +60,9 @@
     "title": "Sunset Over the Beach",
     "description": "A beautiful sunset over a calm beach.",
     "imageUrl": "assets/img7.jpeg",
-    "gender" : "men"
+    "gender" : "men",
+    "category" : "chudi"
+
 
   },
   {
@@ -57,7 +70,9 @@
     "title": "Mountain Peaks",
     "description": "Snow-covered mountain peaks under a clear sky.",
     "imageUrl": "assets/img8.jpeg",
-    "gender" : "men"
+    "gender" : "men",
+    "category" : "kids"
+
 
   },
   {
@@ -65,7 +80,9 @@
     "title": "Forest Path",
     "description": "A peaceful path through a lush green forest.",
     "imageUrl": "assets/img9.jpeg",
-    "gender" : "men"
+    "gender" : "men",
+    "category" : "kids"
+
 
   }
 ]
