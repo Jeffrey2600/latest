@@ -216,11 +216,16 @@ nav {
 .product-card img {
   max-width: 100%;
   height: auto;
+  max-height: 200px;
   margin-bottom: 10px;
   border-radius: 8px;
   animation: zoomIn 2s ease;
 }
 
+video.card-img-top {
+  height: auto; /* Consistent height with images */
+  max-height: 200px;
+}
 .product-card h3 {
   font-size: 20px;
   font-weight: 500;

@@ -1,89 +1,188 @@
 {
   "items": [
-  {
-    "id" : 1,
-    "title": "Sunset Over the Beach",
-    "description": "A beautiful sunset over a calm beach.",
-    "imageUrl": "assets/img1.jpeg",
-    "gender" : "men",
-    "category" : "jwell"
-  },
-  {
-    "id" : 2,
-    "title": "Mountain Peaks",
-    "description": "Snow-covered mountain peaks under a clear sky.",
-    "imageUrl": "assets/img2.jpeg",
-    "gender" : "men",
-    "category" : "jwell"
+    {
+      "id" : 1,
+      "title": "Stone necklace ❤",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/1/img1.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 740/-"
+    },
+    {
+      "id" : 2,
+      "title": "Stone necklace ❤",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/1/img2.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 740/-"
+    },
+    {
+      "id" : 3,
+      "title": "Stone necklace ❤",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/1/vid1.mp4",
+      "mediaType": "video",
+      "category" : "jwellery",
+      "price":"Price : 740/-"
+    },
+    {
+      "id" :4 ,
+      "title": "Stone necklace ❤",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/1/vid2.mp4",
+      "mediaType": "video",
+      "category" : "jwellery",
+      "price":"Price : 740/-"
+    },
+    {
+      "id" : 5,
+      "title": "Impon bracelet",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/2/img1.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 320/-"
+    },
+    {
+      "id" : 6,
+      "title": "Impon bracelet",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/2/img1.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 320/-"
+    },
+    {
+      "id" : 7,
+      "title": "Impon bracelet",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/3/img1.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 320/-"
+    },
 
-  },
-  {
-    "id" : 3,
-    "title": "Forest Path",
-    "description": "A peaceful path through a lush green forest.",
-    "imageUrl": "assets/img3.jpeg",
-    "gender" : "women",
-    "category" : "jwell"
+    {
+      "id" : 8,
+      "title": "Impon bracelet",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/3/img2.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 320/-"
+    },
+    {
+      "id" : 9,
+      "title": "Impon bracelet",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/3/img3.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : 320/-"
+    },
+    {
+      "id" : 10,
+      "title": "Pure impon bangles ",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img1.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+      
+    },
+    {
+      "id" : 11,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img2.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 12,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img3.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 13,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img4.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 14,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img5.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 15,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img6.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 16,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img7.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 17,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img8.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 18,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img9.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 19,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img10.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    },
+    {
+      "id" : 20,
+      "title": "Pure impon bangles",
+      "description": "Free shipping",
+      "imageUrl": "assets/dataset/jwellery/4/img1.jpeg",
+      "mediaType": "image",
+      "category" : "jwellery",
+      "price":"Price : One pair:450/- Two pair:700/-"
+    }
 
-  },
-  {
-    "id" : 4,
-    "title": "Sunset Over the Beach",
-    "description": "A beautiful sunset over a calm beach.",
-    "imageUrl": "assets/img4.jpeg",
-    "gender" : "men",
-    "category" : "jwell"
-
-  },
-  {
-    "id" : 5,
-    "title": "Mountain Peaks",
-    "description": "Snow-covered mountain peaks under a clear sky.",
-    "imageUrl": "assets/img5.jpeg",
-    "gender" : "women",
-    "category" : "chudi"
-
-
-  },
-  {
-    "id" : 6,
-    "title": "Forest Path",
-    "description": "A peaceful path through a lush green forest.",
-    "imageUrl": "assets/img6.jpeg",
-    "gender" : "women",
-    "category" : "chudi"
-
-
-  },
-  {
-    "id" : 7,
-    "title": "Sunset Over the Beach",
-    "description": "A beautiful sunset over a calm beach.",
-    "imageUrl": "assets/img7.jpeg",
-    "gender" : "men",
-    "category" : "chudi"
-
-
-  },
-  {
-    "id" : 8,
-    "title": "Mountain Peaks",
-    "description": "Snow-covered mountain peaks under a clear sky.",
-    "imageUrl": "assets/img8.jpeg",
-    "gender" : "men",
-    "category" : "kids"
-
-
-  },
-  {
-    "id" : 9,
-    "title": "Forest Path",
-    "description": "A peaceful path through a lush green forest.",
-    "imageUrl": "assets/img9.jpeg",
-    "gender" : "men",
-    "category" : "kids"
-
-
-  }
+    
 ]
 }

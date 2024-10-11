@@ -9,27 +9,35 @@
   </mat-nav-list>
   </mat-sidenav>
 
-<mat-sidenav-content>
-<div class="container responsive-grid">
-  <mat-card *ngFor="let item of filteredList" routerLink="home">
-    <img mat-card-image [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)"/>
-    <mat-card-header>
-      <mat-card-title>{{ item.title }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ item.description }}</p>
-    </mat-card-content>
-    <div class="product-price">₹1999.00</div>
-    <mat-card-actions>
-      <div class="product-rating">
-        ⭐⭐⭐⭐⭐ <span>(160 reviews)</span>
-      </div>
-      <button mat-button routerLink="home">LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-</mat-sidenav-content>
+  <mat-sidenav-content>
+    <div class="container responsive-grid">
+      <mat-card *ngFor="let item of filteredList" routerLink="home">
+          <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
+              <img [src]="item.imageUrl" alt="{{ item.title }}" class="card-img-top" (click)="router.navigateByUrl('/product/' + item?.id)" />
+            </ng-container> 
+            <ng-template #videoTemplate>
+              <video controls class="card-img-top">
+                <source [src]="item.imageUrl" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </ng-template>
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ item.price }}</p>
+    
+          <p>{{ item.description }}</p>
+          <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          <button (click)="redirectToGoogleForm()"  class="btn btn-primary">Buy Now</button>
+
+
+    
+        </mat-card-content>
+       
+      </mat-card>
+    </div>
+    </mat-sidenav-content>
 
 
 </mat-sidenav-container>

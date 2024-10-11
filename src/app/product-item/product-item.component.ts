@@ -3,17 +3,22 @@ import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from '../pages/products/products.component';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CartService } from '../services/cart.service'; // Update the path to match the directory structure
+import { Router } from '@angular/router';
+import { Inject } from '@angular/core';
+
+
 @Component({
   selector: 'app-product-item',
   standalone: true,
   imports: [
     FormsModule,
     ProductsComponent,
-    HttpClientModule
+    HttpClientModule,
   ],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css',
-  providers: [HttpClient]
+  providers: [HttpClient,CartService]
 })
 export class ProductItemComponent {
 
@@ -22,7 +27,8 @@ export class ProductItemComponent {
   quantity: number = 1;
 
   constructor(public activatedRoute : ActivatedRoute,
-            public httpClient: HttpClient
+            public httpClient: HttpClient,@Inject(CartService) private cartService: CartService,  // Inject CartService
+            public router: Router 
   ) {
     this.activatedRoute.paramMap.subscribe(data => {
       this.id = data.get('id');
@@ -55,6 +61,10 @@ export class ProductItemComponent {
 
   increaseQuantity() {
     this.quantity++;
+  }
+  addToCart(product: any) {
+    this.cartService.addToCart(product); // Add the product to cart service
+    this.router.navigate(['/cart']); // Navigate to cart page
   }
 
 

@@ -1,67 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import { Component } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
-import { MatListModule } from '@angular/material/list';
-import { MatSidenavModule } from '@angular/material/sidenav';
-
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [MatButtonModule, MatCardModule, MatToolbarModule, CommonModule, HttpClientModule, MatListModule, MatSidenavModule],
-
+  imports: [CommonModule,MatToolbarModule,MatCardModule,MatButtonModule],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.css'
 })
 export class SidenavComponent {
+  items = [
+    { name: 'Item 1', category: 'category1' },
+    { name: 'Item 2', category: 'category2' },
+    { name: 'Item 3', category: 'category3' },
+    { name: 'Item 4', category: 'category4' },
+    { name: 'Item 5', category: 'category5' },
+    // Add more items as needed
+  ];
 
+  filteredItems = this.items; // Initialize with all items
 
-  imageList: Array<any> = [];
-  filteredList: Array<any> = [];
-  filteredProducts: Array<any> = [];
-  
-
-
-  ngOnInit() {
-    this.getData();
-  }
-
-  constructor(public router: Router,
-    public httpClient: HttpClient
-  ) { }
-
-  getData() {
-    let url: string = '/assets/data/products.json';
-    this.httpClient.get(url).subscribe((data: any) => {
-      console.log(data);
-      this.imageList = (data && data.items && data.items.length > 0) ? data.items : [];
-      this.doFilter();
-    });
-  }
-
-
-  doFilter(input: any = null) {
-    if (input) {
-      this.filteredList = (this.imageList && this.imageList.length > 0) ? this.imageList.filter((x: any) => {
-        return (x && x.gender === input) ? true : false;
-      }) : []
-    } else {
-      this.filteredList = this.imageList;
-    }
-  }
-  clicked(){
-    console.log(this.filteredList);  // Check if this contains the expected data
-  }
-
-  onCardClick(route: string) {
-    this.router.navigate([route]);
-  }
   filterCategory(category: string) {
-    this.filteredProducts = this.imageList.filter(product => product.category === category);
+    this.filteredItems = this.items.filter(item => item.category === category);
   }
 
 }

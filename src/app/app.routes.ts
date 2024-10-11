@@ -5,6 +5,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+
 
 export const routes: Routes = [
   {path : '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,6 +19,8 @@ export const routes: Routes = [
   {path: 'profile', component:ProfileComponent},
   {path: 'product', component:ProductsComponent},
   {path: 'product/:id', component:ProductItemComponent},
+  {path: 'cart', component:CartComponent},
+
   {path : '**', component: HomeComponent},
 
 ];

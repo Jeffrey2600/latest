@@ -1,68 +1,26 @@
-/* Sidebar buttons */
-.sidebar button {
-  position: absolute; /* Position them relative to the browser window */
-  left: -50px; /* Initially outside the screen */
-  transition: 0.3s; /* Smooth transition on hover */
-  padding: 5px;
-  padding-left: 50px; /* Padding adjustment */
-  width: 200px; /* Fixed width */
-  text-decoration: none; /* No underline */
-  font-size: 20px; /* Font size */
-  color: #EEEEEE; /* Text color */
-  border-radius: 0 5px 5px 0; /* Rounded corners */
-  background-color: rgba(40, 116, 240, 0.9);
-
+.sidenav {
+  height: 100%; /* Full height */
+  width: 200px; /* Width of the sidebar */
+  position: fixed; /* Fixed Sidebar */
+  background-color: #f1f1f1; /* Light gray */
+  padding-top: 20px; /* Padding from the top */
 }
 
-/* Sidebar buttons hover effect */
-.sidebar button:hover {
-  left: 0; /* Bring the button into view */
-  background-color: #DC5F00; /* Change background on hover */
-  color: #EEEEEE; /* Keep text white */
+.sidenav button {
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Specific buttons with their unique styles */
-#jwell {
-  top: 20px;
-  background-color: #686D76; /* Default color */
+.sidenav button:hover {
+  background-color: #ddd;
 }
 
-#nighty {
-  top: 80px;
-  background-color: #686D76; /* Default color */
-}
-
-#saree {
-  top: 140px;
-  background-color: #686D76; /* Default color */
-}
-
-#sudi {
-  top: 200px;
-  background-color: #686D76; /* Default color */
-}
-
-/* After hover - different styles for buttons */
-#jwell:hover {
-  background-color: #DC5F00; /* Custom hover color */
-  font-style: italic; /* Italicize the text */
-  text-shadow: 1px 1px 2px #000000; /* Add text shadow for a 3D effect */
-}
-
-#nighty:hover {
-  background-color: #DC5F00; /* Custom hover color */
-  font-weight: bold; /* Bold text */
-  letter-spacing: 1px; /* Slightly increase letter spacing */
-}
-
-#saree:hover {
-  background-color: #DC5F00; /* Custom hover color */
-  text-transform: uppercase; /* Change text to uppercase */
-  font-family: 'Courier New', Courier, monospace; /* Set a different font */
-}
-
-#sudi:hover {
-  background-color: #DC5F00; /* Custom hover color */
-  font-size: 22px; /* Increase font size */
-  border: 2px solid #FFFFFF; /* Add a white border */
+.content {
+  margin-left: 220px; /* Margin to shift the content next to the sidebar */
+  padding: 10px;
 }

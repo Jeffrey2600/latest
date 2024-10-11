@@ -1,20 +1,14 @@
-<!-- <mat-sidenav-container class="sidenav-container"> -->
-
-
-
-  <!-- <mat-sidenav mode="side" opened>
-  <mat-nav-list> -->
-    <div class="sidebar">
-      
-
-      <button mat-button onclick="filterCategory('chudi')"  id="jwell">Jewellery</button>
-      <button mat-button (click)="doFilter('women')" id="nighty">Nighty</button>
-      <button mat-button  (click)="doFilter('men')" id="saree">Saree</button>
-      <button mat-button (click)="doFilter('women')" id="sudi">Sudi</button>
-
+<div class="sidenav">
+    <button (click)="filterCategory('category1')">Jwellery</button>
+    <button (click)="filterCategory('category2')">Kids</button>
+    <button (click)="filterCategory('category3')">Sarees</button>
+    <button (click)="filterCategory('category4')">Chudi</button>
+    <button (click)="filterCategory('category5')">Nighty</button>
+  </div>
+  
+  <div class="content">
+    <div *ngFor="let item of filteredItems">
+      {{ item.name }} <!-- Display filtered items here -->
     </div>
-  <!-- </mat-nav-list>
-
-  </mat-sidenav> -->
- <!-- </mat-sidenav-container> -->
-
+  </div>
+  

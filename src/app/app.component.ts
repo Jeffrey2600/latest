@@ -11,6 +11,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { CartComponent } from './pages/cart/cart.component';
 
 import { ProductItemComponent } from './product-item/product-item.component'
 @Component({
@@ -24,12 +25,13 @@ import { ProductItemComponent } from './product-item/product-item.component'
     ProfileComponent,
     ProductsComponent,
     NavbarComponent,
-    SidenavComponent,
+    // SidenavComponent,
     ProductItemComponent,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    CartComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

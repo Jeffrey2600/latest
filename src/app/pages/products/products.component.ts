@@ -8,13 +8,18 @@ import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http'
 import { MatListModule } from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SidenavComponent } from "../../sidenav/sidenav.component";
+import { Inject } from '@angular/core';
 
+
+import { CartService } from '../../services/cart.service'; // Update the path to match the directory structure
 
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [MatButtonModule, MatCardModule, MatToolbarModule, CommonModule, HttpClientModule, MatListModule, MatSidenavModule, SidenavComponent],
+  imports: [MatButtonModule, MatCardModule, MatToolbarModule, CommonModule, HttpClientModule, MatListModule, MatSidenavModule,
+     SidenavComponent,
+    ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
   providers: [HttpClient]
@@ -24,14 +29,18 @@ export class ProductsComponent implements OnInit {
   filteredList : Array<any> = [];
   filteredProducts : Array<any> = [];
 
+  constructor(@Inject(CartService) private cartService: CartService,
+  public router: Router,public httpClient: HttpClient) {}
+
+
 
   ngOnInit() {
     this.getData();
   }
 
-  constructor(public router: Router,
-            public httpClient: HttpClient
-  ) { }
+  // constructor(public router: Router,
+  //           public httpClient: HttpClient
+  // ) { }
 
   getData() {
     let url : string = '/assets/data/products.json';
@@ -63,4 +72,12 @@ export class ProductsComponent implements OnInit {
   filterCategory(category: string) {
     this.filteredProducts = this.imageList.filter(product => product.category === category);
   }
+  addToCart(product: any) {
+    this.cartService.addToCart(product); // Add the product to cart service
+    this.router.navigate(['/cart']); // Navigate to cart page
+  }
+  redirectToGoogleForm() {
+    window.open('https://forms.gle/9Rspid2uiVJtXNrn8', '_blank'); // Opens the form in a new tab
+  }
+  
 }

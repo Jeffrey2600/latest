@@ -39,13 +39,23 @@
         <h2>Latest in Sarees</h2>
         <p>Explore our collection of traditional and modern sarees, perfect for every occasion.</p>
         <div class="product-grid">
-          <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
+            <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
+                <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
+
                 <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
+            </ng-container> 
+            <ng-template #videoTemplate>
+                <video controls class="card-img-top">
+                  <source [src]="item.imageUrl" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </ng-template>
+
                 <h3>{{ item.title }}</h3>
-                <p>$100</p>
                 <p>{{ item.description }}</p>
                 <button>Add to Cart</button>
             </div>
+          
         </div>
     </section>
 
@@ -54,9 +64,18 @@
         <p>Discover our beautiful and intricate jewelry collection for every occasion.</p>
         <div class="product-grid">
             <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
+                <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
+
                 <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
+            </ng-container> 
+            <ng-template #videoTemplate>
+                <video controls class="card-img-top">
+                  <source [src]="item.imageUrl" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </ng-template>
+
                 <h3>{{ item.title }}</h3>
-                <p>$100</p>
                 <p>{{ item.description }}</p>
                 <button>Add to Cart</button>
             </div>
@@ -68,30 +87,48 @@
         <h2>Chudi Suits</h2>
         <p>Traditional chudi suits that bring out your elegant style.</p>
         <div class="product-grid">
-          <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
-              <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
-              <h3>{{ item.title }}</h3>
-              <p>$100</p>
-              <p>{{ item.description }}</p>
-              <button>Add to Cart</button>
-          </div>
-        
-      </div>
+            <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
+                <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
+
+                <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
+            </ng-container> 
+            <ng-template #videoTemplate>
+                <video controls class="card-img-top">
+                  <source [src]="item.imageUrl" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </ng-template>
+
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+                <button>Add to Cart</button>
+            </div>
+          
+        </div>
     </section>
 
     <section class="products" style="text-align: center;">
         <h2>Comfortable Nighty Collection</h2>
         <p>Relax in style with our soft and cozy nighties.</p>
         <div class="product-grid">
-          <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
-              <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
-              <h3>{{ item.title }}</h3>
-              <p>$100</p>
-              <p>{{ item.description }}</p>
-              <button>Add to Cart</button>
-          </div>
-        
-      </div>
+            <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
+                <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
+
+                <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
+            </ng-container> 
+            <ng-template #videoTemplate>
+                <video controls class="card-img-top">
+                  <source [src]="item.imageUrl" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </ng-template>
+
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+                <button>Add to Cart</button>
+            </div>
+          
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 OnlineCart. All rights reserved.</p>

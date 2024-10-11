@@ -10,6 +10,8 @@ import { Card1PageComponent } from './card1-page/card1-page.component';
 import { Card2PageComponent } from './card2-page/card2-page.component';
 import { Card3PageComponent } from './card3-page/card3-page.component';
 import { Card4PageComponent } from './card4-page/card4-page.component';
+import { CartComponent } from './pages/cart/cart.component';
+
 
 
 const routes: Routes = [
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'card3', component: Card3PageComponent },
   { path: 'card4', component: Card4PageComponent },
   {path : 'profile', component: ProfileComponent},
+  { path: 'cart', component: CartComponent }
+
 
   {path : '**', component: HomeComponent},
 

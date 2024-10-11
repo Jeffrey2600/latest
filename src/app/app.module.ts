@@ -18,6 +18,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { enableProdMode } from '@angular/core';
+import { CartService } from './services/cart.service'; // Import the service
+
+
+
 
 
 
@@ -33,6 +39,9 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'about', component: AboutComponent },
 ];
+if (environment.production) {
+  enableProdMode();
+}
 
 @NgModule({
   declarations: [
@@ -43,6 +52,7 @@ const routes: Routes = [
    ],
   imports: [
     MatToolbarModule,
+    HttpClientModule
     MatButtonModule,
     MatIconModule,
     MatInputModule,
@@ -52,7 +62,7 @@ const routes: Routes = [
     RouterModule,
     FormsModule,
     NavbarComponent,
-    SidenavComponent,
+    // SidenavComponent,
     AppComponent,
     NavbarComponent,
     ProductsComponent,
@@ -64,7 +74,7 @@ const routes: Routes = [
     
 
   ],
-  providers:[DataService]
+  providers:[DataService,CartService]
   bootstrap: [] 
 })
 export class AppModule { }

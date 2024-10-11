@@ -1,0 +1,10 @@
+<div class="cart-container">
+    <h2>Cart</h2>
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.imageUrl" alt="Product Image" width="100">
+      <h5>{{ item.title }}</h5>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+  <button (click)="redirectToGoogleForm()" class="btn btn-success">Buy All</button>
+  
