@@ -3,6 +3,9 @@ import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { Router } from '@angular/router';
+import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -12,19 +15,32 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrl: './sidenav.component.css'
 })
 export class SidenavComponent {
-  items = [
-    { name: 'Item 1', category: 'category1' },
-    { name: 'Item 2', category: 'category2' },
-    { name: 'Item 3', category: 'category3' },
-    { name: 'Item 4', category: 'category4' },
-    { name: 'Item 5', category: 'category5' },
-    // Add more items as needed
-  ];
+  imageList : Array<any> = [];
+  filteredList : Array<any> = [];
+  ngOnInit() {
+    this.getData();
+  }
 
-  filteredItems = this.items; // Initialize with all items
+  constructor(public router: Router,
+            public httpClient: HttpClient
+  ) { }
 
-  filterCategory(category: string) {
-    this.filteredItems = this.items.filter(item => item.category === category);
+  getData() {
+    let url : string = '/assets/data/products.json';
+    this.httpClient.get(url).subscribe((data: any) => {
+      console.log(data);
+      this.imageList = (data && data.items && data.items.length > 0 ) ? data.items : [];
+      this.doFilter();
+    });
+  }
+  doFilter(input: any = null) {
+    if(input) {
+      this.filteredList = (this.imageList && this.imageList.length > 0) ? this.imageList.filter((x:any) => {
+        return (x && x.gender === input) ? true : false;
+      }) : []
+    } else {
+      this.filteredList = this.imageList;
+    }
   }
 
 }

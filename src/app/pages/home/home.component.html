@@ -45,7 +45,7 @@
                 <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
             </ng-container> 
             <ng-template #videoTemplate>
-                <video controls class="card-img-top">
+                <video autoplay loop  class="card-img-top">
                   <source [src]="item.imageUrl" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -60,7 +60,7 @@
     </section>
 
     <section class="products" style="text-align: center;">
-        <h2>Exclusive Jewelry Collection</h2>
+        <h2>Exclusive Jewellery Collection</h2>
         <p>Discover our beautiful and intricate jewelry collection for every occasion.</p>
         <div class="product-grid">
             <div class="product-card" *ngFor="let item of filteredList | slice:0:5" routerLink="home">
@@ -69,7 +69,7 @@
                 <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
             </ng-container> 
             <ng-template #videoTemplate>
-                <video controls class="card-img-top">
+                <video autoplay loop  class="card-img-top">
                   <source [src]="item.imageUrl" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -93,7 +93,7 @@
                 <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
             </ng-container> 
             <ng-template #videoTemplate>
-                <video controls class="card-img-top">
+                <video autoplay loop  class="card-img-top">
                   <source [src]="item.imageUrl" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -117,7 +117,7 @@
                 <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
             </ng-container> 
             <ng-template #videoTemplate>
-                <video controls class="card-img-top">
+                <video autoplay loop  class="card-img-top">
                   <source [src]="item.imageUrl" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>

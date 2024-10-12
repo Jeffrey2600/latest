@@ -7,7 +7,8 @@
       "imageUrl": "assets/dataset/jwellery/1/img1.jpeg",
       "mediaType": "image",
       "category" : "jwellery",
-      "price":"Price : 740/-"
+      "price":"Price : 740/-",
+      "gender":"men"
     },
     {
       "id" : 2,
@@ -16,7 +17,9 @@
       "imageUrl": "assets/dataset/jwellery/1/img2.jpeg",
       "mediaType": "image",
       "category" : "jwellery",
-      "price":"Price : 740/-"
+      "price":"Price : 740/-",
+      "gender":"women"
+
     },
     {
       "id" : 3,

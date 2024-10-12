@@ -77,7 +77,7 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['/cart']); // Navigate to cart page
   }
   redirectToGoogleForm() {
-    window.open('https://forms.gle/9Rspid2uiVJtXNrn8', '_blank'); // Opens the form in a new tab
+    window.open('https://forms.gle/Burup62hrvVxkRsT8', '_blank'); // Opens the form in a new tab
   }
   
 }

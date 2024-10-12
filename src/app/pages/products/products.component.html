@@ -12,11 +12,11 @@
   <mat-sidenav-content>
     <div class="container responsive-grid">
       <mat-card *ngFor="let item of filteredList" routerLink="home">
-          <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
+          <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate" >
               <img [src]="item.imageUrl" alt="{{ item.title }}" class="card-img-top" (click)="router.navigateByUrl('/product/' + item?.id)" />
             </ng-container> 
             <ng-template #videoTemplate>
-              <video controls class="card-img-top">
+              <video autoplay loop class="card-img-top">
                 <source [src]="item.imageUrl" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
