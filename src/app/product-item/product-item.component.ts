@@ -18,7 +18,7 @@ import { Inject } from '@angular/core';
   ],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css',
-  providers: [HttpClient,CartService]
+  providers: [HttpClient,]
 })
 export class ProductItemComponent {
 

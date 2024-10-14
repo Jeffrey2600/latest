@@ -23,6 +23,46 @@ body {
 .mat-nav-list {
   padding-top: 20px;
 }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0 ; /* Remove padding */
+  margin-top: 20px;
+  background-color: #f8f9fa; /* Light background for sidebar */
+  height: 100%;
+  width: 100%; /* Set the width of the sidebar */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Add a subtle shadow */
+}
+
+.sidebar button {
+  background-color: rgba(40, 116, 240, 0.9); /* Button background color */
+  border: none;
+  color: #333; /* Text color */
+  padding: 15px 20px; /* Adjust padding for button */
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 20px; /* Spacing between buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  width: 100%;
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1); /* Add button shadow */
+}
+
+.sidebar button:hover {
+  background-color: #ff9999; /* Change color on hover */
+}
+
+.sidebar button:focus {
+  outline: none;
+  background-color: #d0d0d0; /* Focused button style */
+}
+
+
+
+.sidebar button#clear:hover {
+  background-color: #ff9999; /* Hover effect for the specific button */
+}
 
 .mat-sidenav-content {
   padding: 20px;

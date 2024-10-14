@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { CartService } from '../../services/cart.service'; // Update the path to match the directory structure
+import { Inject } from '@angular/core';
 
 
 @Component({
@@ -35,7 +37,7 @@ export class HomeComponent {
   }
 
   constructor(public router: Router,
-            public httpClient: HttpClient
+            public httpClient: HttpClient,@Inject(CartService) private cartService: CartService
   ) {this.displayRandomImages(); }
 
   // Method to shuffle the images and pick 5 random ones
@@ -70,6 +72,13 @@ export class HomeComponent {
 
   onCardClick(route: string) {
     this.router.navigate([route]);
+  }
+  addToCart(product: any) {
+    this.cartService.addToCart(product); // Add the product to cart service
+    this.router.navigate(['/cart']); // Navigate to cart page
+  }
+  getProductsByCategory(category: string) {
+    return this.filteredList.filter(item => item.category === category);
   }
   }
   

@@ -20,7 +20,7 @@ export class CartComponent {
     this.cartItems = this.cartService.getItems(); // Retrieve items from cart service
   }
   redirectToGoogleForm() {
-    window.open('https://forms.gle/Burup62hrvVxkRsT8', '_blank'); // Opens the form in a new tab
+    window.open('https://forms.gle/d3fPWtz5BK6ZMFmh6', '_blank'); // Opens the form in a new tab
   }
   increaseQuantity(item: any) {
     item.quantity++;

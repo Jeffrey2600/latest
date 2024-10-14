@@ -2,9 +2,13 @@
   <mat-sidenav mode="side" opened>
     <mat-nav-list>
 
-      <app-sidenav>
-
-      </app-sidenav>
+      <div class="sidebar">
+        <button mat-button (click)="doFilter('jwellery')" id="jwell">Jewellery</button>
+        <button mat-button (click)="doFilter('Saree')" id="nighty">Saree</button>
+        <button mat-button (click)="doFilter('Sudi')" id="saree">Sudi</button>
+        <button mat-button (click)="doFilter('Nighty')" id="sudi">Nighty</button>
+        <button mat-button (click)="doFilter('kids')" id="clear">Kids</button>
+      </div>
 
   </mat-nav-list>
   </mat-sidenav>

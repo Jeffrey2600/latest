@@ -55,7 +55,7 @@ export class ProductsComponent implements OnInit {
     if(input) {
       this.filteredList = (this.imageList && this.imageList.length > 0) ? this.imageList.filter((x:any) => {
         console.log(this.filteredList);  // Check if this contains the expected data
-        return (x && x.gender === input) ? true : false;
+        return (x && x.category === input) ? true : false;
       }) : []
     } else {
       this.filteredList = this.imageList;
@@ -77,7 +77,7 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['/cart']); // Navigate to cart page
   }
   redirectToGoogleForm() {
-    window.open('https://forms.gle/Burup62hrvVxkRsT8', '_blank'); // Opens the form in a new tab
+    window.open('https://forms.gle/d3fPWtz5BK6ZMFmh6', '_blank'); // Opens the form in a new tab
   }
   
 }
