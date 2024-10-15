@@ -105,10 +105,10 @@
     </section>
 
     <section class="products" style="text-align: center;">
-        <h2>Comfortable Nighty Collection</h2>
-        <p>Relax in style with our soft and cozy nighties.</p>
+        <h2>Kids Collection</h2>
+        <p>Relax in style with our soft and cozy Collection.</p>
         <div class="product-grid">
-            <div class="product-card" *ngFor="let item of getProductsByCategory('Kids') | slice:0:5" routerLink="home">
+            <div class="product-card" *ngFor="let item of getProductsByCategory('kids') | slice:0:5" routerLink="home">
                 <ng-container *ngIf="item.mediaType === 'image'; else videoTemplate">
                   <img [src]="item.imageUrl" (click)="router.navigateByUrl('/product/' + item?.id)">
                 </ng-container>
