@@ -20,7 +20,7 @@
               <img [src]="item.imageUrl" alt="{{ item.title }}" class="card-img-top" (click)="router.navigateByUrl('/product/' + item?.id)" />
             </ng-container> 
             <ng-template #videoTemplate>
-              <video autoplay loop class="card-img-top">
+              <video autoplay muted class="card-img-top">
                 <source [src]="item.imageUrl" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
